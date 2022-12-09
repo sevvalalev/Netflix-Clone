@@ -31,7 +31,7 @@ class HeroHeaderUIView: UIView {
     
     private let heroImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .top
         imageView.clipsToBounds = true
         imageView.image = UIImage(named: "dune")
         return imageView

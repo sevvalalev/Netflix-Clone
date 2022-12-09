@@ -52,6 +52,8 @@ class TitlePreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .red
         view.backgroundColor = .systemBackground
         view.addSubview(webView)
         view.addSubview(titleLabel)
@@ -64,7 +66,7 @@ class TitlePreviewViewController: UIViewController {
     
     func configureConstraints() {
         let webViewConstraints = [
-            webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             webView.heightAnchor.constraint(equalToConstant: 320)

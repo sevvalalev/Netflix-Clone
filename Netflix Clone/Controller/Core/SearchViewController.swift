@@ -39,6 +39,8 @@ class SearchViewController: UIViewController {
         
         navigationItem.searchController = searchController
         navigationController?.navigationBar.tintColor = .systemBackground
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .red
         fetchDiscoverMovies()
         
         searchController.searchResultsUpdater = self
